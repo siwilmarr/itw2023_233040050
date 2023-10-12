@@ -1,0 +1,15 @@
+body {
+    background-color: aqua;
+}
+h1 {
+    font-size: 60px;
+    color: darkblue;
+    font-family: Comic Sans MS;
+}
+p {
+    text-align: justify;
+    font-family: Georgia;
+}
+h4,h3 {
+    font-family: Georgia;
+}
