@@ -1,0 +1,198 @@
+/* font */
+@font-face {
+    font-family: "Jujutsu Kaisen";
+    src: url(Jujutsu\ Kaisen.ttf) format("truetype");
+}
+
+/* style */
+body {
+    font: 18px/36px "Jujutsu Kaisen", "Arial";
+    background-color: #eaeaea;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 50px 0;
+    text-align: center;
+    text-shadow: 2px 2px 2px #ddd;
+    color: black;
+}
+
+.container {
+    width: 850px;
+    background-color: white;
+    margin: auto;
+    padding: 35px;
+    box-shadow: 0 0 4px 3px rgba(107, 107, 107, 0.3);
+    border-radius: 5px;
+}
+
+.galery li {
+    width: 180px;
+    height: 180px;
+    /* overflow: hidden; */
+    border: 5px solid #555;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+}
+
+.galery li img, .galery li, .galery li span {
+    border-radius: 50%;
+}
+
+.galery li span {
+    display: block;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(200, 200, 200, .5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 180px;
+    color: black;
+    text-shadow: 1px 1px 1px white;
+    opacity: 0;
+    transition: .3s;
+    transform: scale(0) rotate(0);
+
+}
+
+.galery li a:hover span {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* overlay */
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 9999;
+    transition: .8s;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+}
+
+.overlay p {
+    position: absolute;
+    top: 90%;
+    left: 43%;
+    color: white;
+    font-size: 50px;
+    text-shadow: 7px 7px 15px rgba(0, 0, 0, .9);
+}
+
+.overlay:target p {
+    animation: zoomin 1s;
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .9);
+    border-radius: 10px;
+}
+
+.overlay:target img {
+    animation: zoomin 1s;
+}
+
+.overlay .close {
+    position: absolute;
+    top: 80px;
+    left: 72%;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    line-height: 30px;
+    padding: 5px;
+    opacity: 0;
+    border-radius: 50%;
+}
+
+.close:hover {
+    color: pink;
+}
+
+.overlay:target .close {
+    animation: slideclose .5s .5s forwards;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+    animation: nextprev .5s .5s forwards;
+}
+
+.next, .prev {
+    width: 67px;
+    height: 122px;
+    background-image: url("next.png");
+    position: absolute;
+    text-indent: -99999px;
+    mix-blend-mode: multiply;
+    top: 39%;
+    margin-left: 50px;
+    opacity: 0;
+}
+
+.prev {
+    background-image: url("prev.png");
+    margin-left: -110px;
+    top: 40%;
+}
+
+/* animasi */
+
+@keyframes nextprev {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideclose {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
