@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 7 - Grid</title>
+    <link rel="stylesheet" href="T7233040050.css">
+
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+
+ <!-- boxicon link -->
+ <link rel="stylesheet"
+ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <header class="header" id="home">
+            <div class="hero">
+            <h2 class="heading">NIKE SHOP</h2>
+            <p class="sub-heading">Brand Nike</p>
+        </div>
+            <div class="features feature-1">
+                <h4 class="price">IDR 2.499.000</h4>
+                <p class="item">Jacket</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">IDR 3.999.000</h4>
+                <p class="item">Shoes</p>
+            </div>
+        </header>
+
+        <nav class="menu">
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <h1>NIKE</h1>
+            </div>
+            <ul class="list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="about" id="about">
+            <div class="main">
+                <img src="img/about.jpg">
+            <div class="about-text">
+            <h2>About <span class="warna">Nike</span></h2>
+            <p>Nike adalah salah satu perusahaan sepatu, pakaian dan alat-alat 
+               olahraga Amerika Serikat yang merupakan salah satu yang terbesar di dunia.
+               Perusahaan ini didirikan pada tanggal 25 Januari 1964 sebagai Blue Ribbon Sports oleh Bill Bowerman dan Phil Knight. Nama Nike resmi dipakai sejak 30 Mei 1978. Nama Nike sendiri berarti dewi kemenangan Yunani. Perusahaan 
+               ini awalnya beroperasi sebagai distributor sepatu Onitsuka Tiger (sekarang ASICS) asal Jepang.</p>
+            </div>
+        </div>
+        </section>
+
+        <section class="product" id="product">
+            <h2>Product</h2>
+            <img src="img/jaket1.jpg">
+            <img src="img/jaket2.jpg">
+            <img src="img/jaket3.jpg">
+            <img src="img/jaket4.jpg">
+            <img src="img/shoes1.jpeg">
+            <img src="img/shoes2.webp">
+            <img src="img/baju1.jpg">
+            <img src="img/baju2.jpg">
+        </section>
+
+        <section class="contact">
+            <div class="contact-text">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="contact-icon">
+                <a href="https://www.instagram.com/wilmarardhana/"><i class='bx bxl-instagram'></i>wilmarardhana</a>
+                <a href=" https://github.com/siwilmarr"><i class='bx bxl-github'></i>siwilmarr</a>
+            </div>
+        </section>
+
+
+    </div>
+    <script>
+    const menuToggle = document.querySelector(".menu-toggle input"); 
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", function () {
+    nav.classList.toggle("slide");
+});
+    </script>
+</body>
+</html>
